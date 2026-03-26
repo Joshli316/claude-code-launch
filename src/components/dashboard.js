@@ -11,18 +11,24 @@ const dayTitles = {};
 getCurriculumOverview().forEach(d => { dayTitles[d.day] = d.title; });
 
 const badges = [
-  { id: 'first-launch',   emoji: '\u{1F680}', name: { zh: '首次启动', en: 'First Launch' },       desc: { zh: '开始你的编程之旅', en: 'Started your coding journey' } },
-  { id: 'first-page',     emoji: '\u{1F4BB}', name: { zh: '第一个页面', en: 'First Page' },        desc: { zh: '创建了第一个网页', en: 'Created your first webpage' } },
-  { id: 'first-quiz',     emoji: '\u{1F9E0}', name: { zh: '首次通关', en: 'Quiz Whiz' },           desc: { zh: '通过了第一个测验', en: 'Passed your first quiz' } },
-  { id: 'streak-3',       emoji: '\u{1F525}', name: { zh: '三天连续', en: '3-Day Streak' },        desc: { zh: '连续学习三天', en: '3 consecutive days of learning' } },
-  { id: 'streak-7',       emoji: '\u{26A1}',  name: { zh: '一周坚持', en: '7-Day Streak' },        desc: { zh: '连续学习一周', en: 'A full week of learning' } },
-  { id: 'html-done',      emoji: '\u{1F3D7}\uFE0F', name: { zh: 'HTML毕业', en: 'HTML Graduate' }, desc: { zh: '完成所有HTML课程', en: 'Completed all HTML lessons' } },
-  { id: 'css-done',       emoji: '\u{1F3A8}', name: { zh: 'CSS达人', en: 'CSS Master' },           desc: { zh: '完成所有CSS课程', en: 'Completed all CSS lessons' } },
-  { id: 'js-done',        emoji: '\u{2699}\uFE0F', name: { zh: 'JS入门', en: 'JS Starter' },      desc: { zh: '完成JavaScript入门', en: 'Completed JS basics' } },
-  { id: 'deploy',         emoji: '\u{1F30D}', name: { zh: '成功部署', en: 'First Deploy' },        desc: { zh: '第一次部署到线上', en: 'Deployed to the world' } },
-  { id: 'all-complete',   emoji: '\u{1F393}', name: { zh: '全部通关', en: 'All Complete' },         desc: { zh: '完成所有14天课程', en: 'Finished all 14 days' } },
-  { id: 'speedrun',       emoji: '\u{23F1}\uFE0F', name: { zh: '极速通关', en: 'Speed Runner' },   desc: { zh: '一天内完成3课以上', en: 'Completed 3+ lessons in one day' } },
-  { id: 'helper',         emoji: '\u{1F91D}', name: { zh: '乐于助人', en: 'Helping Hand' },        desc: { zh: '分享你的项目给朋友', en: 'Shared your project with a friend' } },
+  // Curriculum lesson badges (source of truth: curriculum.js)
+  { id: 'first-launch',     emoji: '\u{1F680}', name: { zh: '首次启动', en: 'First Launch' },        desc: { zh: '完成第1天课程', en: 'Completed Day 1' } },
+  { id: 'first-page',       emoji: '\u{1F4BB}', name: { zh: '第一个页面', en: 'First Page' },        desc: { zh: '完成第2天课程', en: 'Completed Day 2' } },
+  { id: 'style-master',     emoji: '\u{1F3A8}', name: { zh: '样式大师', en: 'Style Master' },        desc: { zh: '完成第3天课程', en: 'Completed Day 3' } },
+  { id: 'prompt-pro',       emoji: '\u{1F4AC}', name: { zh: '提示词达人', en: 'Prompt Pro' },        desc: { zh: '完成第4天课程', en: 'Completed Day 4' } },
+  { id: 'interactive',      emoji: '\u{1F579}\uFE0F', name: { zh: '交互达人', en: 'Interactive' },   desc: { zh: '完成第5天课程', en: 'Completed Day 5' } },
+  { id: 'portfolio-ready',  emoji: '\u{1F4C1}', name: { zh: '作品集就绪', en: 'Portfolio Ready' },   desc: { zh: '完成第6天课程', en: 'Completed Day 6' } },
+  { id: 'architect',        emoji: '\u{1F3D7}\uFE0F', name: { zh: '架构师', en: 'Architect' },       desc: { zh: '完成第8天课程', en: 'Completed Day 8' } },
+  { id: 'data-wizard',      emoji: '\u{1F9D9}', name: { zh: '数据巫师', en: 'Data Wizard' },         desc: { zh: '完成第9天课程', en: 'Completed Day 9' } },
+  { id: 'bug-squasher',     emoji: '\u{1F41B}', name: { zh: '除虫达人', en: 'Bug Squasher' },        desc: { zh: '完成第11天课程', en: 'Completed Day 11' } },
+  { id: 'shipped-it',       emoji: '\u{1F30D}', name: { zh: '成功发布', en: 'Shipped It' },          desc: { zh: '完成第12天课程', en: 'Completed Day 12' } },
+  { id: 'power-user',       emoji: '\u{26A1}',  name: { zh: '高级用户', en: 'Power User' },          desc: { zh: '完成第13天课程', en: 'Completed Day 13' } },
+  { id: 'graduate',         emoji: '\u{1F393}', name: { zh: '毕业啦', en: 'Graduate' },              desc: { zh: '完成第14天课程', en: 'Completed Day 14' } },
+  // Special badges (non-lesson)
+  { id: 'streak-3',         emoji: '\u{1F525}', name: { zh: '三天连续', en: '3-Day Streak' },        desc: { zh: '连续学习三天', en: '3 consecutive days of learning' } },
+  { id: 'streak-7',         emoji: '\u{2699}\uFE0F', name: { zh: '一周坚持', en: '7-Day Streak' },   desc: { zh: '连续学习一周', en: 'A full week of learning' } },
+  { id: 'all-complete',     emoji: '\u{1F3C6}', name: { zh: '全部通关', en: 'All Complete' },         desc: { zh: '完成所有14天课程', en: 'Finished all 14 days' } },
+  { id: 'speedrun',         emoji: '\u{23F1}\uFE0F', name: { zh: '极速通关', en: 'Speed Runner' },   desc: { zh: '一天内完成3课以上', en: 'Completed 3+ lessons in one day' } },
 ];
 
 /**

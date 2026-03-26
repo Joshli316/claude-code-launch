@@ -33,8 +33,22 @@ function renderPage() {
   const appEl = document.getElementById('app');
   const component = components[name];
   if (appEl && component) {
-    appEl.innerHTML = component.render(params);
-    if (component.init) component.init(navigate);
+    try {
+      appEl.innerHTML = component.render(params);
+      if (component.init) component.init(navigate);
+    } catch (err) {
+      console.error(`[CodeLaunch] Error rendering "${name}":`, err);
+      appEl.innerHTML = `
+        <div style="padding:120px 20px;text-align:center;max-width:480px;margin:0 auto;">
+          <div style="font-size:3rem;margin-bottom:16px;">⚠️</div>
+          <h2 style="font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:8px;">页面加载出错 / Page Error</h2>
+          <p style="color:var(--text-muted);margin-bottom:20px;">请刷新页面重试。If this persists, try clearing your browser data.</p>
+          <a href="#/dashboard" style="color:var(--coral);font-weight:600;">返回仪表盘 / Back to Dashboard</a>
+        </div>`;
+    }
+    // Move focus to #app so screen readers announce the new page content
+    appEl.setAttribute('tabindex', '-1');
+    appEl.focus({ preventScroll: true });
   }
 
   // Scroll to top on route change
@@ -159,6 +173,8 @@ function showToast(message, type = 'success') {
   if (!container) {
     container = document.createElement('div');
     container.id = 'toast-container';
+    container.setAttribute('role', 'status');
+    container.setAttribute('aria-live', 'polite');
     container.style.cssText = 'position:fixed;top:20px;right:20px;z-index:10000;display:flex;flex-direction:column;gap:8px;pointer-events:none;';
     document.body.appendChild(container);
   }

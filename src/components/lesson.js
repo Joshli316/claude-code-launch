@@ -115,7 +115,7 @@ function renderQuizSection(section, sectionIndex) {
     const opts = q.options || {};
     const optsArr = Array.isArray(opts) ? opts : (opts[lang] || opts.zh || []);
     const optionsHtml = optsArr.map((opt, oi) => `
-      <button class="quiz-option" data-section="${sectionIndex}" data-question="${qi}" data-option="${oi}" data-correct="${q.correctIndex}">
+      <button class="quiz-option" data-section="${sectionIndex}" data-question="${qi}" data-option="${oi}">
         <span class="quiz-option__letter">${String.fromCharCode(65 + oi)}</span>
         <span class="quiz-option__text">${typeof opt === 'object' ? bilingual(opt.zh, opt.en) : opt}</span>
       </button>
@@ -1121,7 +1121,7 @@ export function init(navigate) {
       // Check if already answered
       if (questionEl.dataset.answered === 'true') return;
 
-      const correctIdx = question.correctIndex != null ? question.correctIndex : parseInt(btn.dataset.correct, 10);
+      const correctIdx = question.correctIndex;
       const isCorrect = optionIdx === correctIdx;
 
       if (isCorrect) {
@@ -1213,20 +1213,6 @@ export function init(navigate) {
             setTimeout(() => {
               window.showToast(t('toast_badge_unlocked', { badge: badgeName }), 'badge');
             }, 500);
-          }
-        }
-      }
-
-      // Check first lesson badge
-      const state = getState();
-      if (state.completedLessons.length === 1) {
-        const isNew = unlockBadge('first_lesson');
-        if (isNew) {
-          if (window.triggerConfetti) window.triggerConfetti();
-          if (window.showToast) {
-            setTimeout(() => {
-              window.showToast(t('toast_badge_unlocked', { badge: t('badge_first_lesson') }), 'badge');
-            }, 1000);
           }
         }
       }

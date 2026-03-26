@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeLaunch 码上出发 — 两周，从零到发布</title>
+  <meta name="description" content="CodeLaunch 码上出发 — 双语教程，帮助中国留学生用Claude Code从零开始，两周内发布真实项目。A bilingual tutorial helping Chinese international students ship real projects with Claude Code in 14 days.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CodeLaunch 码上出发 — Two Weeks, Zero to Shipped">
+  <meta property="og:description" content="双语教程：用AI编程助手Claude Code，从零基础到发布项目。Bilingual tutorial: ship real projects with Claude Code in 14 days.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CodeLaunch 码上出发">
+  <meta name="twitter:description" content="两周，从零到发布。Learn to build with AI in 14 days.">
+
+  <!-- Language alternates -->
+  <link rel="alternate" hreflang="zh" href="">
+  <link rel="alternate" hreflang="en" href="">
+
+  <!-- Favicon (rocket emoji SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#FF6B4A">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "CodeLaunch 码上出发",
+    "description": "A bilingual (Chinese/English) 14-day tutorial teaching Chinese international students to build and ship projects with Claude Code.",
+    "provider": {
+      "@type": "Organization",
+      "name": "CodeLaunch"
+    },
+    "inLanguage": ["zh-CN", "en"],
+    "numberOfCredits": 14,
+    "timeRequired": "P14D",
+    "isAccessibleForFree": true
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            coral: { DEFAULT: '#FF6B4A', light: '#FF8A6F', dark: '#E55A3A' },
+            navy: { DEFAULT: '#1A1A2E', light: '#16213E' },
+            cream: { DEFAULT: '#FFF8F0', dark: '#F0E6D8' },
+            mint: { DEFAULT: '#4ECDC4', light: '#6FE3DC', dark: '#3AB5AD' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans SC', 'sans-serif'],
+            chinese: ['Noto Sans SC', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="src/styles/custom.css">
+
+  <style>
+    /* Base typography fallback */
+    body {
+      font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    code, pre, .font-mono {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+    /* Page transition */
+    .page-enter {
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Hide scrollbar on timeline */
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-cream text-navy min-h-screen">
+  <!-- Navigation mount -->
+  <div id="nav"></div>
+
+  <!-- App mount -->
+  <div id="app"></div>
+
+  <!-- App entry point -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

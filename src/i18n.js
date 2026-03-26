@@ -16,12 +16,10 @@ const strings = {
   // --- Landing ---
   landing_headline:     { zh: '零基础，用AI写出你的第一个网站', en: 'Build your first website from scratch with AI' },
   landing_subheadline:  { zh: '从零到部署，每一步都有AI陪你完成', en: 'From zero to deployed — AI guides every step' },
-  landing_cta:          { zh: '免费开始学习', en: 'Start Learning Free' },
+  landing_cta:          { zh: '开始学习', en: 'Start Learning' },
   landing_pain1:        { zh: '不知道从哪开始？', en: "Don't know where to start?" },
   landing_pain2:        { zh: '学了理论却做不出东西？', en: 'Learned theory but can\'t build anything?' },
   landing_pain3:        { zh: '教程太长，看不下去？', en: 'Tutorials too long to follow?' },
-  landing_pricing_free: { zh: '免费', en: 'Free' },
-  landing_pricing_desc: { zh: '所有课程完全免费开放', en: 'All lessons completely free' },
 
   // --- Dashboard ---
   dash_progress:       { zh: '学习进度', en: 'Progress' },

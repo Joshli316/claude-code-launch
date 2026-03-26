@@ -1038,8 +1038,6 @@ button:focus-visible, a:focus-visible {
 .terminal-line { opacity: 0; transform: translateX(-10px); }
 .terminal-line.visible { opacity: 1; transform: translateX(0); transition: opacity 0.4s ease, transform 0.4s ease; }
 .stat-number { font-variant-numeric: tabular-nums; }
-.pricing-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.pricing-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
 .scroll-container { scrollbar-width: thin; scrollbar-color: #FF6B4A transparent; }
 .scroll-container::-webkit-scrollbar { height: 6px; }
 .scroll-container::-webkit-scrollbar-track { background: transparent; }

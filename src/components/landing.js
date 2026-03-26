@@ -75,7 +75,7 @@ export function render() {
       <div class="mt-10 fade-in-up fade-in-up-delay-3">
         <button id="hero-cta" class="cta-btn inline-flex items-center gap-3 bg-[#FF6B4A] text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg shadow-[#FF6B4A]/30">
           <span>🚀</span>
-          <span>免费开始学习 Start Free</span>
+          <span>开始学习 Start Learning</span>
         </button>
       </div>
     </div>
@@ -242,8 +242,8 @@ export function render() {
       <p class="mt-3 text-white/60 text-sm md:text-base">完成第一个项目<br><span class="text-white/30">To Your First Project</span></p>
     </div>
     <div>
-      <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#FFBD2E]" data-target="100" data-suffix="%">0%</div>
-      <p class="mt-3 text-white/60 text-sm md:text-base">完全免费<br><span class="text-white/30">Completely Free</span></p>
+      <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#FFBD2E]" data-target="3" data-suffix="+">0+</div>
+      <p class="mt-3 text-white/60 text-sm md:text-base">可展示的项目<br><span class="text-white/30">Portfolio Projects</span></p>
     </div>
   </div>
 </section>
@@ -276,64 +276,36 @@ export function render() {
   </div>
 </section>
 
-<!-- ===================== PRICING SECTION ===================== -->
+<!-- ===================== WHAT'S INCLUDED ===================== -->
 <section class="bg-white py-20 px-6">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1A1A2E] mb-2">选择你的计划</h2>
-    <p class="text-center text-[#1A1A2E]/50 mb-14 text-lg">Choose Your Plan</p>
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Free Plan -->
-      <div class="pricing-card bg-white border-2 border-[#FF6B4A] rounded-2xl p-8 relative overflow-hidden">
-        <div class="absolute top-0 right-0 bg-[#FF6B4A] text-white text-xs font-bold px-4 py-1 rounded-bl-xl">推荐 Recommended</div>
-        <h3 class="text-2xl font-bold text-[#1A1A2E] mb-1">免费版</h3>
-        <p class="text-sm text-[#1A1A2E]/50 mb-6">Free</p>
-        <div class="text-5xl font-extrabold text-[#FF6B4A] mb-8">$0 <span class="text-lg font-normal text-[#1A1A2E]/40">/ 永久免费 forever</span></div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start gap-3 text-[#1A1A2E]/70">
-            <span class="text-[#27C93F] mt-0.5">✓</span> <span>14天完整课程 <span class="text-[#1A1A2E]/40">Full 14-day curriculum</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/70">
-            <span class="text-[#27C93F] mt-0.5">✓</span> <span>双语术语词汇表 <span class="text-[#1A1A2E]/40">Bilingual glossary</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/70">
-            <span class="text-[#27C93F] mt-0.5">✓</span> <span>项目作品廊 <span class="text-[#1A1A2E]/40">Project gallery</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/70">
-            <span class="text-[#27C93F] mt-0.5">✓</span> <span>社区交流 <span class="text-[#1A1A2E]/40">Community access</span></span>
-          </li>
-        </ul>
-        <button id="pricing-cta" class="cta-btn w-full bg-[#FF6B4A] text-white font-bold py-3 rounded-full shadow-lg shadow-[#FF6B4A]/20">
-          免费开始 Start Free
-        </button>
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#1A1A2E] mb-2">全部内容，完全免费</h2>
+    <p class="text-[#1A1A2E]/50 mb-10 text-lg">Everything included. 100% free.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+      <div class="text-center">
+        <div class="text-3xl mb-2">&#128218;</div>
+        <p class="text-sm font-semibold text-[#1A1A2E]">14天完整课程</p>
+        <p class="text-xs text-[#1A1A2E]/40">Full curriculum</p>
       </div>
-      <!-- Pro Plan -->
-      <div class="pricing-card bg-[#F8F9FA] border-2 border-[#E5E7EB] rounded-2xl p-8 relative overflow-hidden opacity-80">
-        <div class="absolute top-0 right-0 bg-[#6C63FF] text-white text-xs font-bold px-4 py-1 rounded-bl-xl">即将推出 Coming Soon</div>
-        <h3 class="text-2xl font-bold text-[#1A1A2E] mb-1">专业版</h3>
-        <p class="text-sm text-[#1A1A2E]/50 mb-6">Pro</p>
-        <div class="text-5xl font-extrabold text-[#1A1A2E]/30 mb-8">$?? <span class="text-lg font-normal text-[#1A1A2E]/30">/ 敬请期待</span></div>
-        <ul class="space-y-3 mb-8">
-          <li class="flex items-start gap-3 text-[#1A1A2E]/50">
-            <span class="text-[#27C93F] mt-0.5">✓</span> <span>免费版全部内容 <span class="text-[#1A1A2E]/30">Everything in Free</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/50">
-            <span class="text-[#6C63FF] mt-0.5">★</span> <span>视频教程 <span class="text-[#1A1A2E]/30">Video tutorials</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/50">
-            <span class="text-[#6C63FF] mt-0.5">★</span> <span>1对1辅导 <span class="text-[#1A1A2E]/30">1-on-1 mentoring</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/50">
-            <span class="text-[#6C63FF] mt-0.5">★</span> <span>完课证书 <span class="text-[#1A1A2E]/30">Certificate</span></span>
-          </li>
-          <li class="flex items-start gap-3 text-[#1A1A2E]/50">
-            <span class="text-[#6C63FF] mt-0.5">★</span> <span>优先技术支持 <span class="text-[#1A1A2E]/30">Priority support</span></span>
-          </li>
-        </ul>
-        <button disabled class="w-full bg-[#E5E7EB] text-[#1A1A2E]/40 font-bold py-3 rounded-full cursor-not-allowed">
-          即将推出 Coming Soon
-        </button>
+      <div class="text-center">
+        <div class="text-3xl mb-2">&#128214;</div>
+        <p class="text-sm font-semibold text-[#1A1A2E]">双语词汇表</p>
+        <p class="text-xs text-[#1A1A2E]/40">Bilingual glossary</p>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl mb-2">&#127912;</div>
+        <p class="text-sm font-semibold text-[#1A1A2E]">项目作品廊</p>
+        <p class="text-xs text-[#1A1A2E]/40">Project gallery</p>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl mb-2">&#128172;</div>
+        <p class="text-sm font-semibold text-[#1A1A2E]">社区交流</p>
+        <p class="text-xs text-[#1A1A2E]/40">Community access</p>
       </div>
     </div>
+    <button id="pricing-cta" class="cta-btn inline-block bg-[#FF6B4A] text-white font-bold py-4 px-10 rounded-full shadow-lg shadow-[#FF6B4A]/20 text-lg">
+      开始学习 Start Learning
+    </button>
   </div>
 </section>
 

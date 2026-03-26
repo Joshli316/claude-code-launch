@@ -1,26 +1,14 @@
 import { t, getLanguage } from '../i18n.js';
 import { getState, getLevel, getProgress } from '../state.js';
+import { getCurriculumOverview } from '../content/curriculum.js';
 
 // ============================================
 // CodeLaunch Dashboard — Progress & Gamification
 // ============================================
 
-const dayTitles = {
-  1:  { zh: '你好，Claude!', en: 'Hello, Claude!' },
-  2:  { zh: '你的第一个网页', en: 'Your First Webpage' },
-  3:  { zh: '让它变漂亮', en: 'Make It Pretty' },
-  4:  { zh: '和Claude更好地对话', en: 'Talk to Claude Better' },
-  5:  { zh: '让网页动起来', en: 'Make It Interactive' },
-  6:  { zh: '你的数字名片', en: 'Your Digital Card' },
-  7:  { zh: '复习与展示', en: 'Review & Showcase' },
-  8:  { zh: '真正的项目从这里开始', en: 'Real Projects Start Here' },
-  9:  { zh: '数据的力量', en: 'The Power of Data' },
-  10: { zh: '打造你的应用', en: 'Build Your App' },
-  11: { zh: '当东西坏了', en: 'When Things Break' },
-  12: { zh: '发布到全世界!', en: 'Ship It to the World!' },
-  13: { zh: '进阶技能', en: 'Level Up' },
-  14: { zh: '毕业日', en: 'Graduation Day' },
-};
+// Build dayTitles lookup from curriculum (single source of truth)
+const dayTitles = {};
+getCurriculumOverview().forEach(d => { dayTitles[d.day] = d.title; });
 
 const badges = [
   { id: 'first-launch',   emoji: '\u{1F680}', name: { zh: '首次启动', en: 'First Launch' },       desc: { zh: '开始你的编程之旅', en: 'Started your coding journey' } },

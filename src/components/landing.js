@@ -4,24 +4,17 @@
 
 import { t } from '../i18n.js';
 import { setState } from '../state.js';
+import { getCurriculumOverview } from '../content/curriculum.js';
 
-// --- 14-Day Curriculum Data ---
-const days = [
-  { day: 1,  zh: '认识 Claude Code',      en: 'Meet Claude Code',        desc_zh: '安装、配置、第一次对话', desc_en: 'Install, configure, first conversation' },
-  { day: 2,  zh: '你的第一个网页',         en: 'Your First Webpage',      desc_zh: '用AI生成 HTML 页面', desc_en: 'Generate an HTML page with AI' },
-  { day: 3,  zh: '让页面变好看',           en: 'Make It Beautiful',       desc_zh: '学习 CSS 基础样式', desc_en: 'Learn CSS basics for styling' },
-  { day: 4,  zh: '响应式设计',             en: 'Responsive Design',       desc_zh: '适配手机和电脑屏幕', desc_en: 'Adapt for mobile & desktop' },
-  { day: 5,  zh: 'JavaScript 入门',        en: 'Intro to JavaScript',     desc_zh: '让页面动起来', desc_en: 'Add interactivity' },
-  { day: 6,  zh: '表单与用户输入',         en: 'Forms & Input',           desc_zh: '收集和处理数据', desc_en: 'Collect and handle data' },
-  { day: 7,  zh: '部署上线！',             en: 'Deploy It!',              desc_zh: '让全世界看到你的作品', desc_en: 'Share your work with the world' },
-  { day: 8,  zh: '个人作品集',             en: 'Portfolio Site',          desc_zh: '打造你的在线名片', desc_en: 'Build your online resume' },
-  { day: 9,  zh: '待办事项 App',           en: 'Todo App',                desc_zh: '经典项目实战', desc_en: 'Classic project in practice' },
-  { day: 10, zh: '天气查询 App',           en: 'Weather App',             desc_zh: '学习调用 API', desc_en: 'Learn to call APIs' },
-  { day: 11, zh: '数据可视化',             en: 'Data Visualization',      desc_zh: '用图表展示数据', desc_en: 'Display data with charts' },
-  { day: 12, zh: 'AI 聊天界面',            en: 'AI Chat Interface',       desc_zh: '搭建智能对话页面', desc_en: 'Build a smart chat UI' },
-  { day: 13, zh: '测试与优化',             en: 'Test & Optimize',         desc_zh: '让项目更专业', desc_en: 'Make your project professional' },
-  { day: 14, zh: '毕业项目发布',           en: 'Ship Your Project',       desc_zh: '完成并分享你的作品', desc_en: 'Finish and share your creation' },
-];
+// Build days array from curriculum (single source of truth)
+// Landing page shows subtitle as description
+const days = getCurriculumOverview().map(d => ({
+  day: d.day,
+  zh: d.title.zh,
+  en: d.title.en,
+  desc_zh: d.subtitle.zh,
+  desc_en: d.subtitle.en,
+}));
 
 // --- Testimonials Data ---
 const testimonials = [

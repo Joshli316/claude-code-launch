@@ -23,6 +23,7 @@ export function render(currentRoute = 'dashboard') {
     { route: 'glossary',  labelKey: 'nav_glossary' },
     { route: 'gallery',   labelKey: 'nav_gallery' },
     { route: 'career',    labelKey: 'nav_career' },
+    { route: 'settings',  labelKey: 'nav_settings' },
   ];
 
   const navLinks = navItems.map(({ route, labelKey }) => {

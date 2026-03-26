@@ -349,6 +349,7 @@ export function render() {
             </div>
           `).join('')}
         </div>
+        <p class="text-xs text-gray-400 dark:text-gray-500 mt-6 text-center italic">${lang === 'zh' ? '* 以上案例为模拟情景，仅供参考。' : '* These stories are illustrative examples.'}</p>
       </div>
 
     </div>

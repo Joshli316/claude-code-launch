@@ -78,17 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Update streak
   updateStreak();
 
-  // 4. Initialize router with render callback
+  // 4. Redirect to dashboard if already started (before router init to avoid double render)
+  if (state.started && (!location.hash || location.hash === '#' || location.hash === '#/')) {
+    location.hash = '#/dashboard';
+  }
+
+  // 5. Initialize router with render callback
   initRouter(renderPage);
 
-  // 5. Re-render on language or theme change
+  // 6. Re-render on language or theme change
   document.addEventListener('languageChanged', () => renderPage());
   document.addEventListener('themeChanged', () => renderPage());
-
-  // 6. Redirect to dashboard if already started
-  if (state.started && (!location.hash || location.hash === '#' || location.hash === '#/')) {
-    navigate('/dashboard');
-  }
 });
 
 /* ── Confetti ── */
@@ -103,7 +103,7 @@ function triggerConfetti() {
   canvas.height = window.innerHeight;
 
   const brandColors = [
-    '#FF6B6B', // coral
+    '#FF6B4A', // coral
     '#4ECDC4', // mint
     '#1A1A2E', // navy
     '#FFD93D', // gold

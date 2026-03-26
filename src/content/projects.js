@@ -1,6 +1,6 @@
 /**
  * CodeLaunch Showcase Projects
- * Curated project ideas that align with the 10-day curriculum
+ * Curated project ideas that align with the 14-day curriculum
  */
 
 export const projects = [

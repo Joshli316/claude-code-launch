@@ -367,7 +367,7 @@ export function render() {
 
 <!-- ===================== STATS SECTION ===================== -->
 <section class="bg-[#1A1A2E] py-20 px-6">
-  <div class="max-w-4xl mx-auto grid grid-cols-3 gap-8 text-center">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
     <div>
       <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#FF6B4A]" data-target="543" data-suffix="%">0%</div>
       <p class="mt-3 text-white/60 text-sm md:text-base">AI 岗位需求增长<br><span class="text-white/30">AI Job Demand Growth</span></p>
@@ -387,7 +387,7 @@ export function render() {
 <section class="bg-[#FFF8F0] py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1A1A2E] mb-2">学员的故事</h2>
-    <p class="text-center text-[#1A1A2E]/50 mb-14 text-lg">Student Stories</p>
+    <p class="text-center text-[#1A1A2E]/50 mb-14 text-lg">Student Stories (示例 Illustrative)</p>
     <div class="grid md:grid-cols-3 gap-8">
       ${testimonials.map(tm => `
         <div class="card-hover bg-white rounded-2xl shadow-md p-8">

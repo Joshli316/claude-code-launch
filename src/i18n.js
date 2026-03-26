@@ -2,7 +2,7 @@
 // CodeLaunch i18n — Bilingual Content System
 // ============================================
 
-let currentLang = localStorage.getItem('codelaunch-lang') || 'zh';
+let currentLang = 'zh';
 
 const strings = {
   // --- Nav ---
@@ -143,7 +143,6 @@ export function t(key, params) {
 export function setLanguage(lang) {
   if (lang !== 'zh' && lang !== 'en') return;
   currentLang = lang;
-  localStorage.setItem('codelaunch-lang', lang);
   document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
 }
 

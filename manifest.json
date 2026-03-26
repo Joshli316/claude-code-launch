@@ -2,7 +2,7 @@
   "name": "CodeLaunch 码上出发",
   "short_name": "CodeLaunch",
   "description": "两周，从零到发布。Learn to code with AI in 14 days.",
-  "start_url": "/",
+  "start_url": "/#/dashboard",
   "display": "standalone",
   "background_color": "#FFF8F0",
   "theme_color": "#FF6B4A",

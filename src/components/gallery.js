@@ -93,7 +93,7 @@ function renderProjectCard(project, index) {
         <p class="gallery-card__desc">${description}</p>
         <div class="gallery-card__tags">${tags}</div>
         <button class="gallery-card__btn" data-lesson="${project.relatedDay || 1}">
-          ${lang === 'zh' ? '学习构建' : 'Learn to Build'} / ${lang === 'zh' ? 'Learn to Build' : '学习构建'}
+          ${lang === 'zh' ? '学习构建' : 'Learn to Build'}
         </button>
       </div>
     </div>

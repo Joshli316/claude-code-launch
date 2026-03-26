@@ -69,7 +69,7 @@ export function render() {
   const streakGlow = streak >= 3 ? 'animate-pulse' : '';
 
   return `
-    <div class="max-w-5xl mx-auto px-4 py-6 space-y-6">
+    <div class="max-w-5xl mx-auto px-4 pt-20 pb-6 space-y-6">
 
       <!-- ========== TOP ROW ========== -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -77,7 +77,7 @@ export function render() {
         <!-- Progress Ring -->
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 flex flex-col items-center justify-center">
           <div class="relative">
-            <svg width="150" height="150" class="transform -rotate-90">
+            <svg width="150" height="150" class="transform -rotate-90" role="img" aria-label="${lang === 'zh' ? `课程进度：${pct}%` : `Course progress: ${pct}%`}">
               <circle cx="75" cy="75" r="${ringRadius}"
                       fill="none" stroke-width="10"
                       class="stroke-gray-200 dark:stroke-gray-700" />
@@ -171,7 +171,7 @@ export function render() {
         <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-4">
           ${lang === 'zh' ? '成就徽章' : 'Badges'} <span class="text-sm font-normal text-gray-400">(${state.badges.length}/${badges.length})</span>
         </h3>
-        <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           ${badges.map(b => {
             const unlocked = state.badges.includes(b.id);
             return `
@@ -291,6 +291,8 @@ function renderDayCards(start, end, completedLessons, lang) {
 
     html += `
       <div class="day-card ${bgClass} ${borderClass} rounded-xl p-3 transition-all duration-200 ${cursorClass} relative"
+           role="button"
+           tabindex="${(completed || available) ? '0' : '-1'}"
            data-day="${day}"
            data-available="${completed || available}">
         <div class="flex items-center justify-between mb-2">
@@ -332,6 +334,14 @@ export function init(navigate) {
       const day = card.dataset.day;
       if (available && day) {
         navigate('/lesson/' + day);
+      } else if (!available) {
+        if (window.showToast) { const lang = getLanguage(); window.showToast(lang === 'zh' ? '请先完成前面的课程' : 'Complete previous lessons first', 'streak'); }
+      }
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
       }
     });
   });
@@ -408,4 +418,7 @@ export function init(navigate) {
       if (e.target === modal) closeBadgeModal();
     });
   }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) closeBadgeModal();
+  });
 }

@@ -1199,3 +1199,18 @@
    ============================================ */
 
 #app { padding-top: 0; }
+
+/* Focus visible styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+.quiz-option:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: -2px;
+}

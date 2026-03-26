@@ -50,7 +50,9 @@ export function getState() {
  */
 export function setState(partial) {
   const state = { ...getState(), ...partial };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch { /* storage full — silently continue */ }
   return state;
 }
 

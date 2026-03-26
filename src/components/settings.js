@@ -102,7 +102,7 @@ export function render() {
           <p><span class="font-semibold">${lang === 'zh' ? '版本' : 'Version'}:</span> 1.0.0</p>
           <p><span class="font-semibold">${lang === 'zh' ? '制作' : 'Built by'}:</span> Frontier Commons</p>
           <p>
-            <a href="#/community" class="text-[#FF6B4A] hover:text-[#e85d3f] font-semibold transition-colors">
+            <a href="#/" class="text-[#FF6B4A] hover:text-[#e85d3f] font-semibold transition-colors">
               ${lang === 'zh' ? '加入社区 →' : 'Join the Community →'}
             </a>
           </p>

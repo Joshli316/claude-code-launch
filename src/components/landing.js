@@ -508,7 +508,7 @@ export function render() {
       </div>
     </div>
     <div class="mt-12 pt-8 border-t border-white/10 text-center text-white/30 text-sm">
-      &copy; 2025 CodeLaunch 码上出发. All rights reserved.
+      &copy; 2026 CodeLaunch 码上出发. All rights reserved.
     </div>
   </div>
 </footer>

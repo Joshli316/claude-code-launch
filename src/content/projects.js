@@ -163,5 +163,37 @@ export const projects = [
     relatedDay: 10,
     gradient: 'linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%)',
     icon: '💼'
+  },
+  {
+    id: 'habit-tracker',
+    title: {
+      zh: '习惯打卡器',
+      en: 'Habit Tracker'
+    },
+    description: {
+      zh: '每日习惯追踪应用，支持添加习惯、每日打卡、查看连续天数和完成率统计。',
+      en: 'A daily habit tracking app — add habits, check them off each day, and view streaks and completion stats.'
+    },
+    category: 'tools',
+    tags: ['JavaScript', 'LocalStorage', 'CSS Grid', 'Date'],
+    relatedDay: 7,
+    gradient: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
+    icon: '🎯'
+  },
+  {
+    id: 'quiz-game',
+    title: {
+      zh: '知识问答小游戏',
+      en: 'Quiz Trivia Game'
+    },
+    description: {
+      zh: '一个互动问答游戏，支持多种题目类型、计分系统和结果页面，可自定义题库。',
+      en: 'An interactive trivia game with multiple question types, a scoring system, and results page. Customize your own question bank.'
+    },
+    category: 'creative',
+    tags: ['JavaScript', 'DOM', 'CSS Animation', 'Array'],
+    relatedDay: 8,
+    gradient: 'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)',
+    icon: '🧠'
   }
 ];

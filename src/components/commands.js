@@ -30,54 +30,23 @@ function getFilteredCommands() {
 
 // ── Renderers ──
 
-function getCategoryColor(categoryId) {
-  const cat = commandCategories.find(c => c.id === categoryId);
-  return cat ? cat.color : '#999';
+function getCategoryMeta(categoryId) {
+  return commandCategories.find(c => c.id === categoryId) || { color: '#999', label: { zh: '', en: '' } };
 }
 
-function renderCommandRow(cmd, index) {
+function renderCommandCard(cmd) {
   const lang = getLanguage();
-  const color = getCategoryColor(cmd.category);
-  const desc = lang === 'zh'
-    ? `${cmd.description.zh} <span class="commands-row__desc-alt">${cmd.description.en}</span>`
-    : `${cmd.description.en} <span class="commands-row__desc-alt">${cmd.description.zh}</span>`;
+  const cat = getCategoryMeta(cmd.category);
+  const catLabel = lang === 'zh' ? cat.label.zh : cat.label.en;
 
   return `
-    <tr class="commands-row">
-      <td class="commands-row__num">${index + 1}</td>
-      <td class="commands-row__cmd">
-        <code class="commands-row__code" style="border-left: 3px solid ${color}">${cmd.command}</code>
-      </td>
-      <td class="commands-row__desc">${desc}</td>
-    </tr>
-  `;
-}
-
-function renderCategorySection(cat) {
-  const lang = getLanguage();
-  const label = lang === 'zh'
-    ? `${cat.label.zh} / ${cat.label.en}`
-    : `${cat.label.en} / ${cat.label.zh}`;
-
-  const filtered = getFilteredCommands().filter(c => c.category === cat.id);
-  if (filtered.length === 0) return '';
-
-  // Get the starting index for numbering
-  const allFiltered = getFilteredCommands();
-  const startIndex = allFiltered.indexOf(filtered[0]);
-
-  return `
-    <div class="commands-section">
-      <div class="commands-section__header" style="border-left: 4px solid ${cat.color}">
-        <span class="commands-section__dot" style="background: ${cat.color}"></span>
-        <h3 class="commands-section__title">${label}</h3>
-        <span class="commands-section__count">${filtered.length}</span>
+    <div class="commands-card animate-slide-up">
+      <div class="commands-card__command" style="border-left: 3px solid ${cat.color}">
+        <code>${cmd.command}</code>
       </div>
-      <table class="commands-table">
-        <tbody>
-          ${filtered.map((cmd, i) => renderCommandRow(cmd, startIndex + i)).join('')}
-        </tbody>
-      </table>
+      <div class="commands-card__category" style="color: ${cat.color}">${catLabel}</div>
+      <p class="commands-card__desc-primary">${lang === 'zh' ? cmd.description.zh : cmd.description.en}</p>
+      <p class="commands-card__desc-secondary">${lang === 'zh' ? cmd.description.en : cmd.description.zh}</p>
     </div>
   `;
 }
@@ -107,13 +76,11 @@ function renderContent() {
     `;
   }
 
-  if (currentCategory !== 'all') {
-    const cat = commandCategories.find(c => c.id === currentCategory);
-    if (!cat) return '';
-    return renderCategorySection(cat);
-  }
-
-  return commandCategories.map(cat => renderCategorySection(cat)).join('');
+  return `
+    <div class="commands-grid">
+      ${filtered.map(cmd => renderCommandCard(cmd)).join('')}
+    </div>
+  `;
 }
 
 // ── Public API ──
@@ -190,10 +157,7 @@ export function init() {
     if (!btn) return;
 
     currentCategory = btn.dataset.category;
-
-    // Re-render tabs to update active state and inline styles
     tabsContainer.innerHTML = renderCategoryTabs();
-
     contentContainer.innerHTML = renderContent();
   });
 }

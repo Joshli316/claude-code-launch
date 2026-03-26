@@ -55,11 +55,6 @@ export function getCurrentRoute() {
     }
   }
 
-  // Empty path (no hash or just '#') maps to landing
-  if (pathSegments.length === 0) {
-    return { name: 'landing', params: {} };
-  }
-
   // No match — fall back to landing
   return { name: 'landing', params: {} };
 }

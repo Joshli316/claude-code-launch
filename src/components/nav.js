@@ -192,8 +192,8 @@ export function init(navigate) {
       } else {
         document.documentElement.classList.remove('dark');
       }
-      // Re-render to swap icon — dispatch languageChanged to trigger re-render
-      document.dispatchEvent(new CustomEvent('languageChanged'));
+      // Re-render to swap icon
+      document.dispatchEvent(new CustomEvent('themeChanged'));
     });
   }
 

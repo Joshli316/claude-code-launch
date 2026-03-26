@@ -71,10 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Initialize router with render callback
   initRouter(renderPage);
 
-  // 5. Re-render on language change
-  document.addEventListener('languageChanged', () => {
-    renderPage();
-  });
+  // 5. Re-render on language or theme change
+  document.addEventListener('languageChanged', () => renderPage());
+  document.addEventListener('themeChanged', () => renderPage());
 
   // 6. Redirect to dashboard if already started
   if (state.started && (!location.hash || location.hash === '#' || location.hash === '#/')) {

@@ -65,7 +65,6 @@ const gradients = [
 // ── Renderers ──
 
 function renderCategoryFilters() {
-  const lang = getLanguage();
   return categories.map(cat => {
     const label = `${cat.label.zh} / ${cat.label.en}`;
     const active = cat.id === currentCategory ? 'gallery-filter--active' : '';

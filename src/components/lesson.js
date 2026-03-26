@@ -249,11 +249,7 @@ export function render(params) {
 
   const state = getState();
   const isCompleted = state.completedLessons.includes(day);
-  const totalSections = lesson.sections.length;
-  const terminalCount = lesson.sections.filter(s => s.type === 'terminal').length;
-
   // Build content sections
-  let sectionIndex = 0;
   const contentHtml = lesson.sections.map((section, i) => {
     const c = section.content || section;
     switch (section.type) {
@@ -1099,9 +1095,17 @@ export function render(params) {
   `;
 }
 
+// ── Cleanup previous scroll listener ──
+let _scrollHandler = null;
+
 // ── Init ──
 
 export function init(navigate) {
+  // Remove previous scroll listener to prevent leaks
+  if (_scrollHandler) {
+    window.removeEventListener('scroll', _scrollHandler);
+    _scrollHandler = null;
+  }
   const page = document.querySelector('.lesson-page');
   if (!page) return;
 
@@ -1270,7 +1274,8 @@ export function init(navigate) {
       progressFill.style.width = (progress * 100) + '%';
     }
 
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-    updateScrollProgress();
+    _scrollHandler = updateScrollProgress;
+    window.addEventListener('scroll', _scrollHandler, { passive: true });
+    _scrollHandler();
   }
 }

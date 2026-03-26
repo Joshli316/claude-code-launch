@@ -146,10 +146,8 @@ export function init() {
   document.querySelectorAll('input[name="lang-radio"]').forEach(radio => {
     radio.addEventListener('change', (e) => {
       const newLang = e.target.value;
-      setLanguage(newLang);
       setState({ language: newLang });
-      // Re-render the page to reflect the language change
-      window.location.reload();
+      setLanguage(newLang); // dispatches languageChanged event, triggering re-render
     });
   });
 
@@ -164,6 +162,7 @@ export function init() {
       setState({ theme: newTheme });
 
       // Apply theme to document
+      document.documentElement.dataset.theme = newTheme;
       if (newTheme === 'dark') {
         document.documentElement.classList.add('dark');
       } else {

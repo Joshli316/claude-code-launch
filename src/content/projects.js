@@ -108,7 +108,7 @@ export const projects = [
     },
     description: {
       zh: '一个简洁的博客网站，支持文章列表、文章详情和分类筛选，适合记录学习历程。',
-      en: 'A clean blog website with article listing, detail views, and category filtering — perfect for documenting your learning journey.'
+      en: 'A clean blog website with article listing, detail views, and category filtering — perfect for documenting what you learn.'
     },
     category: 'portfolio',
     tags: ['HTML', 'CSS', 'JavaScript', 'Responsive'],

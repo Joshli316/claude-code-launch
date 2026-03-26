@@ -106,7 +106,7 @@ export const glossaryTerms = [
   },
   {
     en: 'Bug',
-    zh: '漏洞',
+    zh: '缺陷 (Bug)',
     pinyin: 'lou4 dong4',
     definition: {
       zh: '代码中导致意外行为的缺陷',

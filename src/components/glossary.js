@@ -171,7 +171,7 @@ export function init() {
   if (!searchInput || !tabsContainer || !gridContainer) return;
 
   // Search — real-time filtering on keyup
-  searchInput.addEventListener('keyup', () => {
+  searchInput.addEventListener('input', () => {
     currentSearch = searchInput.value.trim();
     gridContainer.innerHTML = renderGrid();
   });

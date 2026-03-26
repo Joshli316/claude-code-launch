@@ -287,7 +287,7 @@ export function render() {
         <h3 class="text-xl font-bold text-[#1A1A2E] mb-1">求职焦虑</h3>
         <p class="text-sm text-[#1A1A2E]/50 mb-3">Career Anxiety</p>
         <p class="text-[#1A1A2E]/70 leading-relaxed">AI技能需求增长543%，掌握 AI 编程工具让你在求职市场脱颖而出。</p>
-        <p class="text-sm text-[#1A1A2E]/40 mt-2">AI skill demand up 543% — future-proof your career.</p>
+        <p class="text-sm text-[#1A1A2E]/40 mt-2">AI skill demand up 543% — Get ahead of the curve.</p>
       </div>
     </div>
   </div>
@@ -297,7 +297,7 @@ export function render() {
 <section class="bg-white py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1A1A2E] mb-2">14天学习路线</h2>
-    <p class="text-center text-[#1A1A2E]/50 mb-6 text-lg">Your 14-Day Journey</p>
+    <p class="text-center text-[#1A1A2E]/50 mb-6 text-lg">Your 14-Day Roadmap</p>
 
     <!-- Week Labels -->
     <div class="flex justify-center gap-6 mb-10">
@@ -419,7 +419,7 @@ export function render() {
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Free Plan -->
       <div class="pricing-card bg-white border-2 border-[#FF6B4A] rounded-2xl p-8 relative overflow-hidden">
-        <div class="absolute top-0 right-0 bg-[#FF6B4A] text-white text-xs font-bold px-4 py-1 rounded-bl-xl">推荐 Popular</div>
+        <div class="absolute top-0 right-0 bg-[#FF6B4A] text-white text-xs font-bold px-4 py-1 rounded-bl-xl">推荐 Recommended</div>
         <h3 class="text-2xl font-bold text-[#1A1A2E] mb-1">免费版</h3>
         <p class="text-sm text-[#1A1A2E]/50 mb-6">Free</p>
         <div class="text-5xl font-extrabold text-[#FF6B4A] mb-8">$0 <span class="text-lg font-normal text-[#1A1A2E]/40">/ 永久免费 forever</span></div>
@@ -485,10 +485,10 @@ export function render() {
       <div>
         <h4 class="text-white font-semibold mb-4">链接 Links</h4>
         <ul class="space-y-2 text-white/40 text-sm">
-          <li><a href="#" class="hover:text-[#FF6B4A] transition-colors">关于我们 About</a></li>
-          <li><a href="#" class="hover:text-[#FF6B4A] transition-colors">学习社区 Community</a></li>
-          <li><a href="#" class="hover:text-[#FF6B4A] transition-colors">隐私政策 Privacy</a></li>
-          <li><a href="#" class="hover:text-[#FF6B4A] transition-colors">联系我们 Contact</a></li>
+          <li><a href="#/settings" class="hover:text-[#FF6B4A] transition-colors">关于我们 About</a></li>
+          <li><a href="#/settings" class="hover:text-[#FF6B4A] transition-colors">学习社区 Community</a></li>
+          <li><a href="#/settings" class="hover:text-[#FF6B4A] transition-colors">隐私政策 Privacy</a></li>
+          <li><a href="#/settings" class="hover:text-[#FF6B4A] transition-colors">联系我们 Contact</a></li>
         </ul>
       </div>
       <!-- WeChat -->

@@ -79,11 +79,12 @@ const strings = {
   settings_exportProgress: { zh: '导出学习数据', en: 'Export Progress' },
 
   // --- Gamification ---
-  level_1:  { zh: '代码萌新', en: 'Code Newbie' },
-  level_2:  { zh: 'HTML学徒', en: 'HTML Apprentice' },
-  level_3:  { zh: 'CSS工匠', en: 'CSS Crafter' },
-  level_4:  { zh: 'JS探索者', en: 'JS Explorer' },
-  level_5:  { zh: '全栈新星', en: 'Full-Stack Rising Star' },
+  level_1:  { zh: '新手', en: 'Beginner' },
+  level_2:  { zh: '学徒', en: 'Apprentice' },
+  level_3:  { zh: '探索者', en: 'Explorer' },
+  level_4:  { zh: '建造者', en: 'Builder' },
+  level_5:  { zh: '创造者', en: 'Creator' },
+  level_6:  { zh: '发布者', en: 'Shipper' },
 
   // Curriculum lesson badges (keys must match: 'badge_' + curriculum badge ID)
   'badge_first-launch':     { zh: '首次启动', en: 'First Launch' },

@@ -18,8 +18,8 @@ const days = {
       {
         type: 'text',
         content: {
-          zh: '欢迎来到 CodeLaunch 码上出发！今天是你编程旅程的第一天，我们先来认识一个超棒的伙伴——Claude Code。\n\nClaude Code 是一个 AI 编程助手，它住在你的终端（也就是那个黑色的命令行窗口）里。你可以把它想象成一个非常聪明的朋友，随时准备帮你写代码、解释概念、和你一起把想法变成真实的东西。\n\n它不是什么神奇的魔法——它是一个工具，一个让编程变得人人都能上手的工具。不管你是学商科的、学设计的，还是学生物的，Claude Code 都能帮你把脑子里的点子变成看得见、摸得着的软件。\n\n最重要的是：你完全不需要有任何编程基础。真的，零基础就能开始。Claude Code 就是为像你这样的初学者设计的。',
-          en: 'Welcome to CodeLaunch! Today is the first day of your coding journey, and we\'re going to meet an amazing partner — Claude Code.\n\nClaude Code is an AI coding assistant that lives in your terminal (that dark command-line window). Think of it as having a brilliant friend who\'s always ready to write code, explain concepts, and build things with you.\n\nIt\'s not magic — it\'s a tool. A tool that makes coding accessible to everyone. Whether you\'re studying business, design, or biology, Claude Code can help you turn the ideas in your head into real, working software.\n\nThe most important thing: you don\'t need ANY programming background to start. Seriously, zero experience required. Claude Code is designed exactly for beginners like you.'
+          zh: '欢迎来到 CodeLaunch 码上出发！今天是你学编程的第一天，我们先来认识一个超棒的伙伴——Claude Code。\n\nClaude Code 是一个 AI 编程助手，它住在你的终端（也就是那个黑色的命令行窗口）里。你可以把它想象成一个非常聪明的朋友，随时准备帮你写代码、解释概念、和你一起把想法变成真实的东西。\n\n它不是什么神奇的魔法——它是一个工具，一个让编程变得人人都能上手的工具。不管你是学商科的、学设计的，还是学生物的，Claude Code 都能帮你把脑子里的点子变成看得见、摸得着的软件。\n\n最重要的是：你完全不需要有任何编程基础。真的，零基础就能开始。Claude Code 就是为像你这样的初学者设计的。',
+          en: 'Welcome to CodeLaunch! This is day one of learning to code, and we\'re going to meet an amazing partner — Claude Code.\n\nClaude Code is an AI coding assistant that lives in your terminal (that dark command-line window). Think of it as having a brilliant friend who\'s always ready to write code, explain concepts, and build things with you.\n\nIt\'s not magic. It\'s a tool that lets you write code by describing what you want in plain words. Whether you\'re studying business, design, or biology, Claude Code can help you turn the ideas in your head into real, working software.\n\nThe most important thing: you don\'t need ANY programming background to start. Seriously, zero experience required. Claude Code works great even if you\'ve never written a line of code.'
         }
       },
       {
@@ -58,7 +58,7 @@ const days = {
         type: 'text',
         content: {
           zh: '你可能在想："我又不是学计算机的，为什么要学这个？"\n\n先看几个数据：AI 相关的工作需求每年增长超过 500%，越来越多的公司在找"能用 AI 快速做出产品原型"的人。对于留学生来说，掌握 AI 辅助开发简直就是一个超级技能——不管你投什么岗位，简历上写着"我能独立用 AI 构建软件原型"，HR 看了都会眼前一亮。\n\n而且说实话，就业市场越来越卷。光有学历已经不够了，你需要能拿出实打实的作品来证明自己。',
-          en: 'You might be thinking: "I\'m not a CS major. Why should I learn this?"\n\nLet\'s look at some numbers: AI-related job demand is growing over 500% year-over-year. More and more companies are looking for people who can rapidly prototype with AI. For international students, mastering AI-assisted development is a genuine superpower — no matter what role you\'re applying for, having "I can independently build software prototypes with AI" on your resume makes you stand out immediately.\n\nAnd let\'s be real: the job market is competitive. A degree alone isn\'t enough anymore. You need to show real, tangible work that proves what you can do.'
+          en: 'You might be thinking: "I\'m not a CS major. Why should I learn this?"\n\nLet\'s look at some numbers: AI-related job demand is growing over 500% year-over-year. More and more companies are looking for people who can rapidly prototype with AI. For international students, knowing AI-assisted development gives you a real edge — no matter what role you\'re applying for, having "I can independently build software prototypes with AI" on your resume makes you stand out immediately.\n\nAnd let\'s be real: the job market is competitive. A degree alone isn\'t enough anymore. You need to show real, tangible work that proves what you can do.'
         }
       },
       {
@@ -73,14 +73,14 @@ const days = {
         content: {
           term: 'AI-Assisted Development (AI辅助开发)',
           zh: 'AI 辅助开发是一种全新的工作方式：你负责想点子、做决策，AI 负责写代码、处理技术细节。这不是取代程序员，而是让每个人都能把想法变成现实。这就是未来的工作模式。',
-          en: 'AI-assisted development is a new way of working: you come up with ideas and make decisions, while AI handles the coding and technical details. It\'s not about replacing programmers — it\'s about empowering everyone to turn ideas into reality. This is the future of work.'
+          en: 'AI-assisted development is a new way of working: you come up with ideas and make decisions, while AI handles the coding and technical details. It\'s not about replacing programmers — it\'s about letting anyone turn ideas into working software. This is how more and more people will work.'
         }
       },
       {
         type: 'tip',
         content: {
           zh: '不管你学的是商科、设计还是生物——能独立做出软件原型，在任何领域都是加分项。这个技能会让你在同龄人中脱颖而出。',
-          en: 'Even if you\'re studying business, design, or biology — the ability to build software prototypes makes you stand out in ANY field. This skill will set you apart from your peers.'
+          en: 'Even if you\'re studying business, design, or biology — the ability to build software prototypes makes you stand out in ANY field. Hiring managers notice candidates who can make things.'
         }
       },
 

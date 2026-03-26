@@ -206,7 +206,8 @@ export function init(navigate) {
 
   // Escape key closes mobile drawer
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeDrawer();
+    const drawer = document.getElementById('mobile-drawer');
+    if (e.key === 'Escape' && drawer && !drawer.classList.contains('translate-x-full')) closeDrawer();
   });
 }
 

@@ -358,17 +358,6 @@ export function render(params) {
 
     </div>
 
-    <style>
-      /* ============================================
-         Lesson Page Styles
-         ============================================ */
-
-      .lesson-page {
-        min-height: 100vh;
-        background: var(--bg);
-        padding-top: 0;
-      }
-
       /* ── Progress Bar ── */
 
       .lesson-progress-bar {
@@ -1089,9 +1078,6 @@ export function render(params) {
       .lesson-section:nth-child(4) { animation-delay: 0.15s; }
       .lesson-section:nth-child(5) { animation-delay: 0.2s; }
       .lesson-section:nth-child(6) { animation-delay: 0.25s; }
-      .lesson-section:nth-child(7) { animation-delay: 0.3s; }
-      .lesson-section:nth-child(8) { animation-delay: 0.35s; }
-    </style>
   `;
 }
 

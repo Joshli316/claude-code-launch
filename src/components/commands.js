@@ -41,12 +41,12 @@ function renderCommandCard(cmd) {
 
   return `
     <div class="commands-card animate-slide-up">
-      <div class="commands-card__command" style="border-left: 3px solid ${cat.color}">
-        <code>${cmd.command}</code>
+      <div class="commands-card__command"><code>${cmd.command}</code></div>
+      <div class="commands-card__zh">${cmd.description.zh}</div>
+      <p class="commands-card__desc">${cmd.description.en}</p>
+      <div class="commands-card__category-tag" style="background: ${cat.color}15; color: ${cat.color}">
+        ${catLabel}
       </div>
-      <div class="commands-card__category" style="color: ${cat.color}">${catLabel}</div>
-      <p class="commands-card__desc-primary">${lang === 'zh' ? cmd.description.zh : cmd.description.en}</p>
-      <p class="commands-card__desc-secondary">${lang === 'zh' ? cmd.description.en : cmd.description.zh}</p>
     </div>
   `;
 }

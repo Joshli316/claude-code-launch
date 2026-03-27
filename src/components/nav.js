@@ -103,14 +103,14 @@ export function render(currentRoute = 'dashboard') {
 
             <!-- Language Toggle -->
             <button id="lang-toggle"
-                    class="px-2 py-1 text-xs font-semibold rounded-md border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    class="min-w-[44px] min-h-[44px] flex items-center justify-center text-xs font-semibold rounded-md border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     aria-label="Toggle language">
               ${lang === 'en' ? '中' : 'EN'}
             </button>
 
             <!-- Dark Mode Toggle -->
             <button id="theme-toggle"
-                    class="p-1.5 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     aria-label="Toggle dark mode">
               ${isDark
                 ? `<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -124,7 +124,7 @@ export function render(currentRoute = 'dashboard') {
 
             <!-- Mobile Hamburger -->
             <button id="menu-toggle"
-                    class="md:hidden p-1.5 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                     aria-label="Open menu">
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -141,7 +141,7 @@ export function render(currentRoute = 'dashboard') {
       <div class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
         <span class="text-sm font-semibold text-gray-900 dark:text-white">${getLanguage() === 'zh' ? '菜单' : 'Menu'}</span>
         <button id="drawer-close"
-                class="p-1.5 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                class="min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                 aria-label="Close menu">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path d="M6 18L18 6M6 6l12 12"/>

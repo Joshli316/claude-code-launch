@@ -63,13 +63,13 @@ export function render() {
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
     <!-- Left: Text Content -->
     <div class="text-center md:text-left">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight glow-text fade-in-up">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight glow-text fade-in-up">
         两周，从零到发布。
       </h1>
-      <p class="mt-4 text-2xl md:text-3xl text-white/70 font-light fade-in-up fade-in-up-delay-1">
+      <p class="mt-4 text-xl sm:text-2xl md:text-3xl text-white/70 font-light fade-in-up fade-in-up-delay-1">
         Two weeks. Zero to shipped.
       </p>
-      <p class="mt-6 text-lg text-white/60 leading-relaxed max-w-lg fade-in-up fade-in-up-delay-2">
+      <p class="mt-6 text-base sm:text-lg text-white/60 leading-relaxed max-w-lg fade-in-up fade-in-up-delay-2">
         学习使用 Claude Code，从完全不会编程到独立发布真实项目。全中文教程，英文术语双语对照，专为中国留学生设计。
       </p>
       <div class="mt-10 fade-in-up fade-in-up-delay-3">
@@ -165,11 +165,11 @@ export function render() {
     <p class="text-center text-[#1A1A2E]/50 mb-6 text-lg">Your 14-Day Roadmap</p>
 
     <!-- Week Labels -->
-    <div class="flex justify-center gap-6 mb-10">
-      <span class="inline-flex items-center gap-2 bg-[#FF6B4A]/10 text-[#FF6B4A] font-semibold px-4 py-2 rounded-full text-sm">
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-6 mb-10">
+      <span class="inline-flex items-center gap-2 bg-[#FF6B4A]/10 text-[#FF6B4A] font-semibold px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm">
         <span>📖</span> Week 1: 基础篇 Foundations
       </span>
-      <span class="inline-flex items-center gap-2 bg-[#4ECDC4]/10 text-[#0D8B7D] font-semibold px-4 py-2 rounded-full text-sm">
+      <span class="inline-flex items-center gap-2 bg-[#4ECDC4]/10 text-[#0D8B7D] font-semibold px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm">
         <span>🔨</span> Week 2: 实战篇 Real-World
       </span>
     </div>
@@ -231,18 +231,18 @@ export function render() {
 </section>
 
 <!-- ===================== STATS SECTION ===================== -->
-<section class="bg-[#1A1A2E] py-20 px-6">
-  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+<section class="bg-[#1A1A2E] py-16 sm:py-20 px-6">
+  <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
     <div>
-      <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#FF6B4A]" data-target="543" data-suffix="%">0%</div>
+      <div class="stat-number text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#FF6B4A]" data-target="543" data-suffix="%">0%</div>
       <p class="mt-3 text-white/60 text-sm md:text-base">AI 岗位需求增长<br><span class="text-white/30">AI Job Demand Growth</span></p>
     </div>
     <div>
-      <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#4ECDC4]" data-target="14" data-suffix="天">0天</div>
+      <div class="stat-number text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#4ECDC4]" data-target="14" data-suffix="天">0天</div>
       <p class="mt-3 text-white/60 text-sm md:text-base">完成第一个项目<br><span class="text-white/30">To Your First Project</span></p>
     </div>
     <div>
-      <div class="stat-number text-5xl md:text-6xl font-extrabold text-[#FFBD2E]" data-target="3" data-suffix="+">0+</div>
+      <div class="stat-number text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#FFBD2E]" data-target="3" data-suffix="+">0+</div>
       <p class="mt-3 text-white/60 text-sm md:text-base">可展示的项目<br><span class="text-white/30">Portfolio Projects</span></p>
     </div>
   </div>

@@ -230,11 +230,11 @@ export function render() {
       </div>
 
       <!-- ========== STAT CARDS ========== -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
         ${stats.map(s => `
-          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-5 text-center">
-            <p class="text-3xl md:text-4xl font-extrabold text-[#FF6B4A]">${s.number}</p>
-            <p class="mt-2 text-sm font-medium text-gray-700 dark:text-gray-300">${s.desc[lang]}</p>
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-4 sm:p-5 text-center">
+            <p class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#FF6B4A]">${s.number}</p>
+            <p class="mt-2 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">${s.desc[lang]}</p>
             <p class="mt-1 text-[10px] text-gray-400 dark:text-gray-500">${s.source[lang]}</p>
           </div>
         `).join('')}

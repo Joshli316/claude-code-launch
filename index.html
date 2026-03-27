@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>起码 QiMa — 两周，从零到发布</title>
   <meta name="description" content="起码 QiMa — 双语教程，帮助中国留学生用Claude Code从零开始，两周内发布真实项目。A bilingual tutorial helping Chinese international students ship real projects with Claude Code in 14 days.">
 
@@ -77,8 +77,9 @@
     code, pre, .font-mono {
       font-family: 'JetBrains Mono', 'Fira Code', monospace;
     }
-    /* Smooth scrolling */
-    html { scroll-behavior: smooth; }
+    /* Smooth scrolling + prevent horizontal overflow on mobile */
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
     /* Hide scrollbar on timeline */
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

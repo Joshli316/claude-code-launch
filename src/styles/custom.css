@@ -199,6 +199,7 @@
 
 .badge-card {
   width: 100px;
+  max-width: 100%;
   text-align: center;
   padding: 16px 8px;
   border-radius: var(--radius);
@@ -275,9 +276,11 @@
   position: fixed;
   top: 20px;
   right: 20px;
+  left: 20px;
   z-index: 10000;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
   pointer-events: none;
 }
@@ -293,8 +296,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  min-width: 280px;
-  max-width: 400px;
+  min-width: min(280px, 100%);
+  max-width: min(400px, 100%);
   font-size: 14px;
   animation: toastIn 0.35s ease both;
 }
@@ -622,7 +625,7 @@
 
 .glossary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: 16px;
 }
 
@@ -669,6 +672,8 @@
   .glossary-grid { grid-template-columns: 1fr; }
   .glossary-title { font-size: 1.5rem; }
   .glossary-title__en { font-size: 1.1rem; }
+  .glossary-wotd { padding: 18px 16px; }
+  .glossary-wotd__term { font-size: 1.4rem; }
 }
 
 /* ============================================
@@ -713,7 +718,7 @@
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 20px;
 }
 
@@ -772,7 +777,7 @@
 .gallery-inspiration__sub { display: block; font-weight: 400; color: var(--text-muted); font-size: 1rem; }
 .gallery-inspiration__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
   gap: 16px;
   margin-top: 24px;
 }
@@ -791,6 +796,9 @@
 
 @media (max-width: 768px) {
   .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-title { font-size: 1.5rem; }
+  .gallery-title__en { font-size: 1.1rem; }
+  .gallery-inspiration__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ============================================
@@ -830,7 +838,7 @@
 /* Terminal Block */
 .terminal-block { position: relative; }
 .terminal-block__copy-row { display: flex; justify-content: flex-end; margin-bottom: 4px; }
-.terminal-copy-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #8B949E; font-size: 11px; padding: 3px 8px; border-radius: 4px; cursor: pointer; transition: all var(--transition); font-family: inherit; }
+.terminal-copy-btn { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #8B949E; font-size: 11px; padding: 8px 12px; border-radius: 4px; cursor: pointer; transition: all var(--transition); font-family: inherit; min-height: 36px; }
 .terminal-copy-btn:hover { background: rgba(255,255,255,0.12); color: #C9D1D9; }
 .terminal-copy-btn.copied { color: var(--mint); border-color: var(--mint); }
 .terminal-prompt { color: #C9D1D9; white-space: pre-wrap; word-break: break-all; }
@@ -905,7 +913,7 @@
 .image-placeholder__text { margin-top: 12px; font-size: 0.9rem; color: var(--text-muted); }
 
 /* Bottom Navigation */
-.lesson-bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-card); border-top: 1px solid var(--border); padding: 12px 20px; z-index: 40; box-shadow: 0 -4px 16px var(--shadow); }
+.lesson-bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-card); border-top: 1px solid var(--border); padding: 12px 20px; padding-bottom: max(12px, env(safe-area-inset-bottom)); z-index: 40; box-shadow: 0 -4px 16px var(--shadow); }
 .lesson-bottom-nav__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .lesson-nav-btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--transition); border: none; font-family: inherit; }
 .lesson-nav-btn--prev, .lesson-nav-btn--next { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
@@ -1146,7 +1154,7 @@ button:focus-visible, a:focus-visible {
 
 .commands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: 16px;
 }
 
@@ -1172,6 +1180,10 @@ button:focus-visible, a:focus-visible {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--coral);
+  word-break: break-all;
+}
+@media (max-width: 480px) {
+  .commands-card__command code { font-size: 1.05rem; }
 }
 
 .commands-card__zh {

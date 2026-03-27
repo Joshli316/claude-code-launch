@@ -1,4 +1,4 @@
-# CodeLaunch 码上出发
+# 起码 QiMa
 
 A bilingual (Chinese/English) tutorial app that takes Chinese international students from zero coding knowledge to shipping prototypes with Claude Code in 14 days.
 

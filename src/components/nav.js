@@ -72,7 +72,7 @@ export function render(currentRoute = 'dashboard') {
               <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3"/>
             </svg>
             <span class="text-lg font-bold text-gray-900 dark:text-white">
-              CodeLaunch<span class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">码上出发</span>
+              起码<span class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">QiMa</span>
             </span>
           </a>
 

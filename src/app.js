@@ -1,5 +1,5 @@
 /**
- * app.js — Main app controller for CodeLaunch 码上出发
+ * app.js — Main app controller for 起码 QiMa
  */
 
 import { initRouter, navigate, getCurrentRoute } from './router.js';
@@ -38,7 +38,7 @@ function renderPage(route) {
       appEl.innerHTML = component.render(params);
       if (component.init) component.init(navigate);
     } catch (err) {
-      console.error(`[CodeLaunch] Error rendering "${name}":`, err);
+      console.error(`[QiMa] Error rendering "${name}":`, err);
       appEl.innerHTML = `
         <div style="padding:120px 20px;text-align:center;max-width:480px;margin:0 auto;">
           <div style="font-size:3rem;margin-bottom:16px;">⚠️</div>

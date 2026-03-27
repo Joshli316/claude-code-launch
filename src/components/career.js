@@ -1,7 +1,7 @@
 import { getLanguage } from '../i18n.js';
 
 // ============================================
-// CodeLaunch — Career Corner Component
+// 起码 QiMa — Career Corner Component
 // ============================================
 
 const stats = [

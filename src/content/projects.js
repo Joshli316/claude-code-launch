@@ -1,5 +1,5 @@
 /**
- * CodeLaunch Showcase Projects
+ * 起码 QiMa Showcase Projects
  * Curated project ideas that align with the 14-day curriculum
  */
 

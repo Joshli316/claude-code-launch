@@ -1,6 +1,6 @@
 {
-  "name": "CodeLaunch 码上出发",
-  "short_name": "CodeLaunch",
+  "name": "起码 QiMa",
+  "short_name": "起码",
   "description": "两周，从零到发布。Learn to code with AI in 14 days.",
   "start_url": "/#/dashboard",
   "display": "standalone",

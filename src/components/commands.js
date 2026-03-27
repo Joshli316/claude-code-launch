@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch — Claude Code Commands Reference
+// 起码 QiMa — Claude Code Commands Reference
 // ============================================
 
 import { getLanguage } from '../i18n.js';

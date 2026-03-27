@@ -3,7 +3,7 @@ import { getState, getLevel, getProgress } from '../state.js';
 import { getCurriculumOverview } from '../content/curriculum.js';
 
 // ============================================
-// CodeLaunch Dashboard — Progress & Gamification
+// 起码 QiMa Dashboard — Progress & Gamification
 // ============================================
 
 // Build dayTitles lookup from curriculum (single source of truth)

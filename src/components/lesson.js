@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch — Lesson Viewer Component
+// 起码 QiMa — Lesson Viewer Component
 // ============================================
 
 import { t, getLanguage } from '../i18n.js';

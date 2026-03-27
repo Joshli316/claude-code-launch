@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch i18n — Bilingual Content System
+// 起码 QiMa i18n — Bilingual Content System
 // ============================================
 
 let currentLang = 'zh';

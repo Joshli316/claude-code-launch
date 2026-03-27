@@ -1,8 +1,8 @@
-# Implementation Plan: CodeLaunch 码上出发
+# Implementation Plan: 起码 QiMa
 
 ## Overview
 
-CodeLaunch is a bilingual tutorial web app that guides Chinese international students from zero coding knowledge to shipping real prototypes with Claude Code in 14 days. It solves three critical pain points: language barriers (bilingual Chinese/English), tech intimidation (zero-assumed knowledge, step-by-step guidance), and career anxiety (connects AI skills to job outcomes). The app is a static SPA on Cloudflare Pages with localStorage-based progress tracking — no backend, no accounts required.
+QiMa (起码) is a bilingual tutorial web app that guides Chinese international students from zero coding knowledge to shipping real prototypes with Claude Code in 14 days. It solves three critical pain points: language barriers (bilingual Chinese/English), tech intimidation (zero-assumed knowledge, step-by-step guidance), and career anxiety (connects AI skills to job outcomes). The app is a static SPA on Cloudflare Pages with localStorage-based progress tracking — no backend, no accounts required.
 
 ## Product Design Rationale
 
@@ -114,7 +114,7 @@ Chinese international students face a brutal job market (H-1B fee hikes, visa un
 - **Success stories**: Profiles of students who leveraged AI skills
 
 ### F7. Navigation Bar
-- **Logo**: "CodeLaunch 码上出发" with rocket icon
+- **Logo**: "起码 QiMa" with rocket icon
 - **Nav items**: Dashboard, Lessons, Glossary, Gallery, Career
 - **Language toggle**: 中/EN switch
 - **Progress indicator**: Small progress ring in nav

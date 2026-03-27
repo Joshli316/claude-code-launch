@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch — Bilingual Tech Glossary
+// 起码 QiMa — Bilingual Tech Glossary
 // ============================================
 
 import { t, getLanguage } from '../i18n.js';

@@ -1,4 +1,4 @@
-// curriculum.js — Lesson content for CodeLaunch
+// curriculum.js — Lesson content for 起码 QiMa
 // Each day returns a structured lesson object with bilingual content.
 
 const days = {
@@ -18,8 +18,8 @@ const days = {
       {
         type: 'text',
         content: {
-          zh: '欢迎来到 CodeLaunch 码上出发！今天是你学编程的第一天，我们先来认识一个超棒的伙伴——Claude Code。\n\nClaude Code 是一个 AI 编程助手，它住在你的终端（也就是那个黑色的命令行窗口）里。你可以把它想象成一个非常聪明的朋友，随时准备帮你写代码、解释概念、和你一起把想法变成真实的东西。\n\n它不是什么神奇的魔法——它是一个工具，一个让编程变得人人都能上手的工具。不管你是学商科的、学设计的，还是学生物的，Claude Code 都能帮你把脑子里的点子变成看得见、摸得着的软件。\n\n最重要的是：你完全不需要有任何编程基础。真的，零基础就能开始。Claude Code 就是为像你这样的初学者设计的。',
-          en: 'Welcome to CodeLaunch! This is day one of learning to code, and we\'re going to meet an amazing partner — Claude Code.\n\nClaude Code is an AI coding assistant that lives in your terminal (that dark command-line window). Think of it as having a brilliant friend who\'s always ready to write code, explain concepts, and build things with you.\n\nIt\'s not magic. It\'s a tool that lets you write code by describing what you want in plain words. Whether you\'re studying business, design, or biology, Claude Code can help you turn the ideas in your head into real, working software.\n\nThe most important thing: you don\'t need ANY programming background to start. Seriously, zero experience required. Claude Code works great even if you\'ve never written a line of code.'
+          zh: '欢迎来到起码 QiMa！今天是你学编程的第一天，我们先来认识一个超棒的伙伴——Claude Code。\n\nClaude Code 是一个 AI 编程助手，它住在你的终端（也就是那个黑色的命令行窗口）里。你可以把它想象成一个非常聪明的朋友，随时准备帮你写代码、解释概念、和你一起把想法变成真实的东西。\n\n它不是什么神奇的魔法——它是一个工具，一个让编程变得人人都能上手的工具。不管你是学商科的、学设计的，还是学生物的，Claude Code 都能帮你把脑子里的点子变成看得见、摸得着的软件。\n\n最重要的是：你完全不需要有任何编程基础。真的，零基础就能开始。Claude Code 就是为像你这样的初学者设计的。',
+          en: 'Welcome to QiMa! This is day one of learning to code, and we\'re going to meet an amazing partner — Claude Code.\n\nClaude Code is an AI coding assistant that lives in your terminal (that dark command-line window). Think of it as having a brilliant friend who\'s always ready to write code, explain concepts, and build things with you.\n\nIt\'s not magic. It\'s a tool that lets you write code by describing what you want in plain words. Whether you\'re studying business, design, or biology, Claude Code can help you turn the ideas in your head into real, working software.\n\nThe most important thing: you don\'t need ANY programming background to start. Seriously, zero experience required. Claude Code works great even if you\'ve never written a line of code.'
         }
       },
       {

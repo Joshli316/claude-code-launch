@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch — Project Showcase Gallery
+// 起码 QiMa — Project Showcase Gallery
 // ============================================
 
 import { getLanguage } from '../i18n.js';

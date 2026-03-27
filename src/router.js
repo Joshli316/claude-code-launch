@@ -1,5 +1,5 @@
 /**
- * CodeLaunch 码上出发 — Hash-based SPA Router
+ * 起码 QiMa — Hash-based SPA Router
  */
 
 /**

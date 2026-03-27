@@ -1,5 +1,5 @@
 # Product Requirements Document
-## CodeLaunch 码上出发
+## 起码 QiMa
 
 **Version:** 1.0  |  **Date:** 2026-03-26  |  **URL:** https://claude-code-launch.pages.dev/
 
@@ -7,7 +7,7 @@
 
 ## 1. Overview
 
-CodeLaunch 码上出发 is a free, bilingual (Chinese/English) tutorial that teaches Chinese international students to build and ship real web projects using Claude Code in 14 days. No prior coding experience required.
+起码 QiMa is a free, bilingual (Chinese/English) tutorial that teaches Chinese international students to build and ship real web projects using Claude Code in 14 days. No prior coding experience required.
 
 **Target audience:** Chinese international students with zero coding background who want to build portfolio-worthy projects using AI-assisted development.
 
@@ -141,7 +141,7 @@ index.html
 
 | Element | Value |
 |---------|-------|
-| Title | `CodeLaunch 码上出发 — 两周，从零到发布` |
+| Title | `起码 QiMa — 两周，从零到发布` |
 | Meta description | Bilingual, 160 chars, action-oriented |
 | Open Graph | Title, description, type, locale (zh_CN + en_US), URL, image |
 | Twitter Card | `summary_large_image` with title, description, image |

@@ -2,7 +2,7 @@ import { t, getLanguage, setLanguage } from '../i18n.js';
 import { getState, setState, resetState, toggleTheme } from '../state.js';
 
 // ============================================
-// CodeLaunch — Settings Component
+// 起码 QiMa — Settings Component
 // ============================================
 
 /**
@@ -99,7 +99,7 @@ export function render() {
           ${lang === 'zh' ? '关于 / About' : 'About / 关于'}
         </h2>
         <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-          <p><span class="font-semibold">${lang === 'zh' ? '应用' : 'App'}:</span> CodeLaunch ${lang === 'zh' ? '码上出发' : ''}</p>
+          <p><span class="font-semibold">${lang === 'zh' ? '应用' : 'App'}:</span> ${lang === 'zh' ? '起码 QiMa' : 'QiMa 起码'}</p>
           <p><span class="font-semibold">${lang === 'zh' ? '版本' : 'Version'}:</span> 1.0.0</p>
           <p><span class="font-semibold">${lang === 'zh' ? '制作' : 'Built by'}:</span> Frontier Commons</p>
           <p>

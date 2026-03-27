@@ -1,5 +1,5 @@
 /**
- * CodeLaunch Glossary Data
+ * 起码 QiMa Glossary Data
  * Bilingual tech terms for Chinese-speaking learners
  */
 

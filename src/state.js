@@ -1,5 +1,5 @@
 /**
- * CodeLaunch 码上出发 — State Management
+ * 起码 QiMa — State Management
  * localStorage-based state with defaults and helper functions.
  */
 

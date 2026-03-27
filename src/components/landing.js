@@ -1,5 +1,5 @@
 // ============================================
-// CodeLaunch 码上出发 — Landing Page Component
+// 起码 QiMa — Landing Page Component
 // ============================================
 
 import { setState } from '../state.js';
@@ -127,8 +127,8 @@ export function render() {
 <!-- ===================== PAIN POINT CARDS ===================== -->
 <section class="bg-[#FFF8F0] py-20 px-6">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1A1A2E] mb-4">为什么选择 CodeLaunch？</h2>
-    <p class="text-center text-[#1A1A2E]/60 mb-14 text-lg">Why CodeLaunch?</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-[#1A1A2E] mb-4">为什么选择起码？</h2>
+    <p class="text-center text-[#1A1A2E]/60 mb-14 text-lg">Why QiMa?</p>
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Card 1: Language Barrier -->
       <div class="card-hover bg-white rounded-2xl shadow-md p-8 text-center">
@@ -315,7 +315,7 @@ export function render() {
     <div class="grid md:grid-cols-3 gap-12">
       <!-- Brand -->
       <div>
-        <h3 class="text-2xl font-bold text-white mb-2">CodeLaunch <span class="text-[#FF6B4A]">码上出发</span></h3>
+        <h3 class="text-2xl font-bold text-white mb-2">起码 <span class="text-[#FF6B4A]">QiMa</span></h3>
         <p class="text-white/40 text-sm leading-relaxed">两周，从零到发布。<br>Two weeks. Zero to shipped.</p>
       </div>
       <!-- Links -->
@@ -338,7 +338,7 @@ export function render() {
       </div>
     </div>
     <div class="mt-12 pt-8 border-t border-white/10 text-center text-white/30 text-sm">
-      &copy; 2026 CodeLaunch 码上出发. All rights reserved.
+      &copy; 2026 起码 QiMa. All rights reserved.
     </div>
   </div>
 </footer>

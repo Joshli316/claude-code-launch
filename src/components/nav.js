@@ -64,12 +64,11 @@ export function render(currentRoute = 'dashboard') {
 
           <!-- Left: Logo -->
           <a href="#/" class="flex items-center gap-2 shrink-0" id="nav-logo">
-            <svg class="w-6 h-6 text-[#FF6B4A]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
-              <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
-              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0"/>
-              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3"/>
+            <svg width="28" height="28" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="52" width="20" height="20" rx="4" fill="#FF6B4A" opacity="0.4"/>
+              <rect x="28" y="36" width="20" height="36" rx="4" fill="#FF6B4A" opacity="0.7"/>
+              <rect x="52" y="20" width="20" height="52" rx="4" fill="#FF6B4A"/>
+              <circle cx="62" cy="13" r="5" fill="#4ECDC4"/>
             </svg>
             <span class="text-lg font-bold text-gray-900 dark:text-white">
               起码<span class="text-xs font-normal text-gray-400 dark:text-gray-500 ml-1">QiMa</span>
